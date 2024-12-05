@@ -204,22 +204,20 @@ El objetivo principal de este proyecto es llevar a cabo un sistema de señalizac
 
 \subsection{Alcance}
 \subsubsection{Organizativo}
-Al no ser un proyecto de despliegue, sino de elaboración de un dispositivo, no es necesario involucrar a los organismos encargados de la infraestructura de la vigilancia y control del tráfico(En el caso de España, serían la Gerencia de Informática y la Subdirección General de Gestión de la Movilidad y Tecnología, ambas pertenecientes a la Dirección General de Tráfico) más allá de una posible financiación u asesoramiento. Sin embargo, con los recursos humanos qué dispone LinterniTek, solo es posible realizar \textit{in-house} el diseño y construcción del dispositivo (en lo que a hardware y software), siendo necesario  subcontratar los siguientes servicios: 
+Al no ser un proyecto de despliegue, sino de elaboración de un dispositivo, no es necesario involucrar a los organismos encargados de la infraestructura de la vigilancia y control del tráfico(En el caso de España, serían la Gerencia de Informática y la Subdirección General de Gestión de la Movilidad y Tecnología, ambas pertenecientes a la Dirección General de Tráfico) más allá de una posible financiación u asesoramiento. Sin embargo, con los recursos humanos qué dispone LinterniTek, solo es posible realizar \textit{in-house} el diseño y construcción del dispositivo (en lo que a hardware y software rspecta), siendo necesario  subcontratar los siguientes servicios: 
 \begin{itemize}
-    \item \textbf{Asesoramiento legal:} Para la correcta gestión e interpretación de patentes, homologaciones, normativas \ldots
+    \item \textbf{Asesoramiento legal:} Para la correcta gestión e interpretación de patentes, homologaciones, normativas \ldots a las que se vea sujeta el proyecto
     \item \textbf{Marketing:} Para poder promocionarnos de cara a la captación de fondos o una comercialización de producto.
     \item \textbf{Traducción e Interpretación:} De cara a traducir y adaptar la documentación tanto interna y externa del proyecto como el material promocional.
-
     \item \textbf{Fabricación de PCBs:} Autoexplicativo.
+     \item \textbf{Asesoramiento científico-meteorológico:} Para la correcta calibración de un algoritmo que, a partir mediciones de los sensores, pueda deducir las condiciones climáticas y cómo afectan a la carretera(luminosidad, visibilidad general, deslizamiento) establezca una velocidad máxima
 \end{itemize}
-\begin{itemize}
-    \item \textbf{Asesoramiento Legal}
-\end{itemize}
+
 \subsubsection{Funcional}
  Los objetivos funcionales que debe cumplir el proyecto son los siguientes: 
   \begin{itemize}
-      \item \textbf{Hardware:} Se ha de desarrollar un dispositivo electrónico que integre múltiples sensores meteorológicos(pluviómetro) junto con sensores de luminosidad, e infrarrojos (con la finalidad de detectar la presencia de coches), junto con la correspondiente señal electrónica homologada. Además de contar con múltiples canales de comunicación como redes celulares(5g) y de larga distancia(LoraWan) o mesh (ZigBee). Todo esto se presenta de forma intencionadamente ambigua, ya que las homologaciones, certificaciones, normativas y estándares que sean necesarios cumplimentar varían según la zona donde se vaya a implantar.
-      \item \textbf{Software:}
+      \item \textbf{Hardware:} Se ha de desarrollar un dispositivo electrónico que integre múltiples sensores meteorológicos(pluviómetro) junto con sensores de luminosidad, e infrarrojos (con la finalidad de detectar la presencia de coches), junto con la correspondiente señal electrónica homologada. Además de contar con múltiples canales de comunicación como redes celulares(5g) y de larga distancia(LoRaWAN) o mesh (ZigBee). Todo esto se presenta de forma intencionadamente ambigua, ya que las homologaciones, certificaciones, normativas y estándares que sean necesarios cumplimentar varían según la zona donde se vaya a implantar.
+      \item \textbf{Software:} Desarrollar un algoritmo que en función de las mediciones obtenidas por los sensores establezca una nueva velocidad máxima y la muestre en la señal.
       \item \textbf{ API:} Ha de poseer las siguientes funciones: 
       \begin{itemize}
           \item   Enviar los datos meteorológicos recopilados a un servidor central para su posterior análisis.
@@ -232,13 +230,31 @@ Al no ser un proyecto de despliegue, sino de elaboración de un dispositivo, no 
       
   \end{itemize}
 \subsubsection{Temporal}
-El proyecto se plantea con una duración máxima de 2 años sin tener en cuenta el tiempo necesario 
+El proyecto se plantea con una duración máxima de 2 años sin tener en cuenta el tiempo necesario para la certificación y homologación de sus componentes hardware y software  que en caso de ser necesaria, podría suponer un tiempo adicional de un año y medio aproximadamente.
+\par
+ Con relación a las metodologías de desarrollo, se establecerá de forma definitiva en documentos posteriores, pero se propone un desarrollo en cascada para los componentes hardware y una metodología en espiral para los componentes software.
+
 \subsection{Restricciones,Riesgos y Asunciones}
+TERMINAR 
+% que lo hackeen y cambien ellos las velocidades
+%   que la infraeestructura informatica  existente con la que tenga que interactuar esté obsoleta
+% asumimos que las certificaciones y demás varian de regíon en región
+% idem con la extrapolación entre los datos de los sensores y la velocidad 
+% ie una medición puede no significar lo mismo en el artico  que n sevilla que en japón
+% por ejemplo los materiales de las carreteras pueden volverse más resbaladizos con el agua e sevilla que en japón ()mee lo estoy inventando
+% es posible que dependiendo de todos estos factores sea necesario reescruparte del proyecto según donde se despliegue 
+
+
+
 \subsection{Dependencias}
 Este proyecto no depende de ningún proyecto previo.
 
 \end{fullwidth}
-
+\section{Costes y Financiación}
+%En principio es autofinanciado
+% Los costes, los costes de un prototipillo barato
+% en palabras crear una prueba de concepto utilizable  y funcionalemte identica al producto deseado eexcetuando por las letyes y tol rrollo
+%mencionar que son componentes que a priori están sin cerrtificar
 
 %----------------------------------------------------------------------------------------
 
