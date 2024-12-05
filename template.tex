@@ -24,7 +24,7 @@
 	%unnumberedsections, % Uncomment for no section numbering
 ]{CSSullivanBusinessReport}
 
-\addbibresource{sample.bib} % BibLaTeX bibliography file
+%\addbibresource{sample.bib} % BibLaTeX bibliography file
 
 %----------------------------------------------------------------------------------------
 %	REPORT INFORMATION
@@ -40,6 +40,7 @@ con respecto a las condiciones meteorológicas} % Report subtitle, include new l
 \reportdate{2024-03-04} % Report date, include new lines for additional information if needed
 
 \rightheadercontent{\includegraphics[width=3cm]{creodocs_logo.pdf}} % The content in the right header, you may want to add your own company logo or use your company/department name or leave this command empty for no right header content
+\renewcommand{\contentsname}{Índice}
 
 %----------------------------------------------------------------------------------------
 
@@ -99,7 +100,7 @@ con respecto a las condiciones meteorológicas} % Report subtitle, include new l
 	
 	NIF: F-1234567-E
 	
-	Correo electrónico: contacto@linternitek.es
+	Correo electrónico: \href{mailto:contacto@linternitek.com}{contacto@linternitek.com}.
 	
 	\vfill % Push the following down to the bottom of the page
 	\subsection*{Acerca del documento}
@@ -160,7 +161,58 @@ con respecto a las condiciones meteorológicas} % Report subtitle, include new l
 %----------------------------------------------------------------------------------------
 %	SECTIONS
 %----------------------------------------------------------------------------------------
+\begin{fullwidth}
+    
 
+\section{Contexto}
+\subsection{Sobre Nosotros}
+Nuestra empresa, LinterniTek, se dedica al desarrollo de Sistemas Empotrados aplicados al ámbito de la automoción y la seguridad vial, con la misión de optimizar y mejorar la seguridad vial y la gestión del tráfico en tiempo real utilizando sistemas autónomos y conectados.  
+\par
+Esta propuesta de proyecto forma parte de la visión de la empresa de crear soluciones innovadoras para gestionar y adaptar las condiciones de las carreteras a las necesidades de los usuarios, de manera que se reduzca el riesgo de accidentes de tráfico y se mejore la fluidez del tráfico
+\subsection{Sobre el problema }
+En los últimos años en España, debido a las fluctuaciones extremas y rápidas del clima (que en caso de precipitaciones y neblina se traduce en una reducción de la visibilidad) y sumadas a la deficiente señalización, el estado de deterioro de algunas carreteras y la influencia de accidentes cercanos recientes lo que dificulta que los conductores puedan evaluar su entorno de manera adecuada, lo que a su vez lleva a comportamientos impredecibles. Esto ha llevado a un aumento en los accidentes de tráfico. Esta problemática se agravará a medida que el creciente cambio climático provoque una mayor impredecibilidad en las condiciones temporales, requiriendo una mayor capacidad de adaptación con menores márgenes de reacción. 
+\par 
+Con el fin de ilustrar la problemática, a continuación, se detallan diversos accidentes cuya causa principalmente fue la baja visibilidad: 
+\begin{itemize}
+    \item El martes 20 de marzo de 2024, sobre las 4 de la madrugada, ocurrió un fatal accidente en la autopista AP-4 que conecta Cádiz con Sevilla. Debido a la baja visibilidad y a una mala señalización, un camión (que además iba por encima del límite de velocidad permitido por el camión y por la autopista) embistió un control de la Guardia Civil situado en la salida a Utrera en sentido Sevilla matando a seis personas en el suceso.
+
+    \item Unos días después, a la altura de la salida hacia el aeropuerto de Jerez y en sentido Sevilla, ocurrió otro accidente en el cual, debido a la lluvia intensa y a la velocidad que dicho conductor llevaba en el momento (más de 120 kilómetros por hora), acabó atravesando la mediana y casi llegando al carril contrario de la circulación.
+\end{itemize}
+\end{fullwidth}
+\newpage
+\begin{fullwidth}
+    
+
+\section{Alcance del proyecto}
+\subsection{Objetivos}
+El objetivo principal de este proyecto es llevar a cabo un sistema de señalización automático de la velocidad (denominado SafeSign) que tenga en cuenta diversos factores como pueden ser ambientales, lumínicos, tráfico, accidentales e incluso estadísticos para poder determinar una nueva velocidad máxima permitida y así avise a los conductores de los posibles peligros y de la nueva velocidad permitida mediante señales electrónicas dispuestas en puntos estratégicos de la carretera. Pretendiendo así lo siguiente:  
+\begin{itemize}
+    \item Poder asegurar que los usuarios puedan conducir de manera segura por una carretera independientemente de las condiciones en la que se encuentre la misma. 
+
+    \item Proporcionar información a los usuarios que usen dicha carretera del estado en el que se encuentra.
+
+    \item Realizar un control automático sobre la velocidad de las carreteras teniendo en cuenta los factores meteorológicos que haya. 
+
+    \item  Reducir el número de accidentes de tráfico y victimas que puedan ocasionarse debido a las condiciones meteorológicas. 
+
+    \item  Generar y proporcionar un corpus de datos que permitan llevar a cabo evaluaciones estadísticas y análisis a gran escala con Big Data e Inteligencia Artificial. 
+
+    \item  Comercializar este sistema de forma internacional para así poder reducir a nivel mundial el número de accidentes de tráfico. 
+\end{itemize}
+
+
+
+\subsection{Alcance}
+\subsubsection{Organizativo}
+
+\subsubsection{Funcional}
+\subsubsection{Temporal}
+
+\subsection{Restricciones}
+\subsection{Dependencias}
+Este proyecto no depende de ningún proyecto previo
+
+\end{fullwidth}
 \section{Section Title} % Top level section
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam auctor mi risus, quis tempor libero hendrerit at. Duis hendrerit placerat quam et semper. Nam ultricies metus vehicula arcu viverra, vel ullamcorper justo elementum. Pellentesque vel mi ac lectus cursus posuere et nec ex. Fusce quis mauris egestas lacus commodo venenatis. Ut at arcu lectus. Donec et urna nunc. Morbi eu nisl cursus sapien eleifend tincidunt quis quis est. Donec ut orci ex. Praesent ligula enim, ullamcorper non lorem a, ultrices volutpat dolor. Nullam at imperdiet urna. Pellentesque nec velit eget est pretium.\sidenote{This is a sidenote. This template features a large margin specifically so you can put notes, figures, tables and other things into it as additional material to the main content in the text block.}
