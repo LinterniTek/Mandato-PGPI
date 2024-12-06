@@ -204,7 +204,7 @@ El objetivo principal de este proyecto es llevar a cabo un sistema de señalizac
 
 \subsection{Alcance}
 \subsubsection{Organizativo}
-Al no ser un proyecto de despliegue, sino de elaboración de un dispositivo, no es necesario involucrar a los organismos encargados de la infraestructura de la vigilancia y control del tráfico(En el caso de España, serían la Gerencia de Informática y la Subdirección General de Gestión de la Movilidad y Tecnología, ambas pertenecientes a la Dirección General de Tráfico) más allá de una posible financiación u asesoramiento. Sin embargo, con los recursos humanos qué dispone LinterniTek, solo es posible realizar \textit{in-house} el diseño y construcción del dispositivo (en lo que a hardware y software rspecta), siendo necesario  subcontratar los siguientes servicios: 
+Al no ser un proyecto de despliegue, sino de elaboración de un dispositivo, no es necesario involucrar a los organismos encargados de la infraestructura de la vigilancia y control del tráfico(En el caso de España, serían la Gerencia de Informática y la Subdirección General de Gestión de la Movilidad y Tecnología, ambas pertenecientes a la Dirección General de Tráfico) más allá de una posible financiación u asesoramiento. Sin embargo, con los recursos humanos qué dispone LinterniTek, solo es posible realizar \textit{in-house} el diseño y construcción del dispositivo (en lo que a hardware y software respecta), siendo necesario  subcontratar los siguientes servicios: 
 \begin{itemize}
     \item \textbf{Asesoramiento legal:} Para la correcta gestión e interpretación de patentes, homologaciones, normativas \ldots a las que se vea sujeta el proyecto
     \item \textbf{Marketing:} Para poder promocionarnos de cara a la captación de fondos o una comercialización de producto.
@@ -234,8 +234,19 @@ El proyecto se plantea con una duración máxima de 2 años sin tener en cuenta 
 \par
  Con relación a las metodologías de desarrollo, se establecerá de forma definitiva en documentos posteriores, pero se propone un desarrollo en cascada para los componentes hardware y una metodología en espiral para los componentes software.
 
-\subsection{Restricciones,Riesgos y Asunciones}
-TERMINAR 
+\subsection{Restricciones, Riesgos y Asunciones}
+
+A nivel de riesgos, se identifican dos: 
+\begin{itemize}
+    \item \textbf{Riesgos de acceso y manipulación no autorizada:} Si el dispositivo no contase con las medidas de seguridad a nivel físico(ej.: cerraduras y caja de protección), como a nivel hardware(encriptación a nivel de firmware y otras medidas de protección de PI) y software(sistemas de identificación y autenticación). Un agente externo no autorizado podría acceder y manipular a su antojo el dispositivo.
+    \item \textbf{Infraestructura informática preexistente obsoleta:} Puede darse que por diversos factores, la infraestructura informática con la que deba interactuar el dispositivo esté obsoleta o no pueda actualizarse y el sistema, por tanto, no sea compatible.
+\end{itemize}
+ Respecto a las asunciones, también se parte de dos de ellas: 
+ \begin{itemize}
+     \item \textbf{Relativos a la extrapolación de mediciones- condiciones meteorológicas:}  Debido a los diferentes materiales que emplean las diferentes regiones para la construcción de su infraestructura de tráfico y a los factores meteorológicos de dicha región, una medición puede tener implicaciones distintas según la región en las que se tome.
+     \item \textbf{Normativas, regulaciones y homologaciones:} Por lo general suelen varía según la zona y pueden no ser compatibles entre ellas.
+ \end{itemize}
+ Debido a esto, se asume que dependiendo de donde se despliegue el proyecto, será necesario modificar o rehacer parte de él.
 % que lo hackeen y cambien ellos las velocidades
 %   que la infraeestructura informatica  existente con la que tenga que interactuar esté obsoleta
 % asumimos que las certificaciones y demás varian de regíon en región
@@ -249,13 +260,33 @@ TERMINAR
 \subsection{Dependencias}
 Este proyecto no depende de ningún proyecto previo.
 
-\end{fullwidth}
+\newpage
 \section{Costes y Financiación}
 %En principio es autofinanciado
 % Los costes, los costes de un prototipillo barato
 % en palabras crear una prueba de concepto utilizable  y funcionalemte identica al producto deseado eexcetuando por las letyes y tol rrollo
 %mencionar que son componentes que a priori están sin cerrtificar
 
+A continuación, se desglosan los costes hardware a los que hay que incurrir para la elaboración  de un prototipo funcionalmente idéntico al dispositivo que se pretende elaborar, pero sin contar con las certificaciones necesarias: 
+
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|} \hline 
+         Componente&  Referencia(Mouser)& Precio(\texteuro)\\ \hline 
+         Placa 
+B-L475E-IOT01A2
+&  511-B-L475E-IOT01A2 & 51,26\texteuro\\ \hline 
+         Panel Solar&  713-114992711& 60,45\texteuro\\ \hline 
+         Fotoresistor&  846-PDV-P9002-1& 1,36\texteuro (Variable según cantidad)\\ \hline 
+         Sensor infrarrojos&  782-TCRT5000& 16\texteuro (Variable según cantidad)\\ \hline 
+         Display TFT&  485-3533& 7,39\texteuro\\ \hline 
+         Anemómetro&  485-1733& 41,80\texteuro\\ \hline
+    \end{tabular}
+    
+\end{table}
+En principio, con las reservas que cuenta LinterniTek podríamos autofinanciar los costes de desarrollo hardware y software, sin embargo, los costes de asesoría no están todavía determinados, por lo que podría ser necesario recurrir a campañas o plataformas de financiación como son Crowdsupply o Kickstarter o bien oa organismos y entidades públicas o privadas como pueden ser la DGT o Telefónica.
+\end{fullwidth}
 %----------------------------------------------------------------------------------------
 
 \end{document}
